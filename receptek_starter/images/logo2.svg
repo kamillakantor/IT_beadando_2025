@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Minimal recipe favicon - knife and fork</title>
+  <!-- háttér: friss zöld -->
+  <rect width="64" height="64" rx="14" fill="#37A745"/>
+  
+  <!-- ikon: fehér kés és villa -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- villa -->
+    <path d="M22 14 V28" />
+    <path d="M26 14 V28" />
+    <path d="M30 14 V28" />
+    <path d="M26 28 V50" />
+    
+    <!-- kés -->
+    <path d="M40 14 H44 V50 H40 Z" fill="#FFFFFF" stroke="none" />
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+Készítő: Vezetéknév Keresztnév
+Élő oldal URL: https://felhasznalo.github.io/receptek/
+Téma (2 mondat): Receptajánló weboldal bevásárlólistával és „Gyors séf” mini-játékkal, természetes (zöld) stílusban. A felhasználó recepteket böngészhet, a hozzávalókat egy kattintással bevásárlólistára teheti, és reflexjátékban gyakorolhatja az alapanyagok felismerését.
+Saját JS kód:
+ - js/lista.js: Bevásárlólista (hozzáadás/törlés/pipa, szűrés, drag & drop vizuális rendezés), localStorage mentés.
+ - js/jatek.js: „Gyors séf” reflexjáték (időzítő, pontozás, toplista localStorage-ban).
+ - js/receptek.js: Listázás és szűrés (kategória, nehézség, idő, kereső).
+ - js/recept.js: Részletnézet és hozzávalók átadása (URL param + localStorage queue).
+ - js/form.js: Receptbeküldő űrlap kliens oldali validálással (legalább 7 különböző mező és 5+ validáció).
+Használt egyedi font: Google Fonts – Poppins (UI), Merriweather (szöveg). Lásd: css/style.css.
+Külső források: Nincs (a projekt saját, oktatási célú boilerplate). Ha később snippetet használsz, pontos link + fájlnév + sorszám itt tüntetendő fel.
+Megjegyzés: A képfájlok minta/placeholder jellegűek. Cseréld őket jogtiszta képekre.

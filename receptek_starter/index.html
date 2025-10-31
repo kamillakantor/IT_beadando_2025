@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vezetéknév Keresztnév">
+  <meta name="description" content="Receptek – receptajánló weboldal bevásárlólistával és mini-játékkal.">
+  <title>receptek</title>
+  <link rel="icon" href="favicon2.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Főoldal">
+      <img src="images/logo2.svg" alt="receptek logó">
+      <span class="brand">receptek</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü váltása">☰</button>
+    <nav id="site-nav" class="site-nav" aria-label="Fő navigáció">
+      <a href="index.html">Főoldal</a>
+      <a href="receptek.html">Receptek</a>
+      <a href="lista.html">Bevásárlólista</a>
+      <a href="jatek.html">Játék</a>
+      <a href="kapcsolat.html">Recept beküldése</a>
+    </nav>
+  </header>
+  <main class="container">
+
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Üdv a <em class="rec">receptek</em> oldalán!</h1>
+        <p>Fedezd fel a legfinomabb ételeket, add a hozzávalókat a bevásárlólistádhoz, és próbáld ki a mini-játékot.</p>
+        <div class="hero__actions">
+          <a class="btn" href="receptek.html">Fedezd fel a recepteket</a>
+          <a class="btn btn--secondary" href="jatek.html">Játssz: Gyors séf</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid_cards" id="featured">
+      <h2 class="section-title">Kiemelt receptek</h2>
+      <div class="card-grid" data-bind="featured">
+        <!-- JS tölti be a kártyákat a RECIPES-ből -->
+      </div>
+    </section>
+
+    <script type="module">
+      import { RECIPES } from './js/data/recipes.js';
+      import { createRecipeCard } from './js/receptek.js';
+
+      const featured = document.querySelector('[data-bind="featured"]');
+      const top3 = RECIPES.slice(0, 3);
+      for (const r of top3) {
+        featured.appendChild(createRecipeCard(r));
+      }
+    </script>
+
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 receptek • Készítette: Kántor Kamilla</p>
+    <p><a href="#" rel="nofollow">GitHub Pages link helye</a></p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

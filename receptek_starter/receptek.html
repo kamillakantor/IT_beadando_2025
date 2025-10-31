@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vezetéknév Keresztnév">
+  <meta name="description" content="Receptek – receptajánló weboldal bevásárlólistával és mini-játékkal.">
+  <title>receptek</title>
+  <link rel="icon" href="favicon2.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Főoldal">
+      <img src="images/logo2.svg" alt="receptek logó">
+      <span class="brand">receptek</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü váltása">☰</button>
+    <nav id="site-nav" class="site-nav" aria-label="Fő navigáció">
+      <a href="index.html">Főoldal</a>
+      <a href="receptek.html">Receptek</a>
+      <a href="lista.html">Bevásárlólista</a>
+      <a href="jatek.html">Játék</a>
+      <a href="kapcsolat.html">Recept beküldése</a>
+    </nav>
+  </header>
+  <main class="container">
+
+    <section class="filters">
+      <h1>Receptek</h1>
+      <form class="filter-form" id="filterForm">
+        <label>
+          Kategória
+          <select name="category">
+            <option value="">Mind</option>
+            <option value="leves">Leves</option>
+            <option value="foetel">Főétel</option>
+            <option value="desszert">Desszert</option>
+            <option value="vega">Vegetáriánus</option>
+          </select>
+        </label>
+        <label>
+          Nehézség
+          <select name="difficulty">
+            <option value="">Mind</option>
+            <option value="konnyu">Könnyű</option>
+            <option value="kozepes">Közepes</option>
+            <option value="nehez">Nehéz</option>
+          </select>
+        </label>
+        <label>
+          Max. idő (perc)
+          <input type="number" name="time" min="1" max="240" placeholder="pl. 45">
+        </label>
+        <label>
+          Keresés
+          <input type="search" name="q" placeholder="pl. csirke, tészta...">
+        </label>
+      </form>
+    </section>
+
+    <section class="grid_cards">
+      <div class="card-grid" id="recipeGrid">
+        <!-- JS tölti be -->
+      </div>
+    </section>
+
+    <script type="module">
+      import { initRecipeList } from './js/receptek.js';
+      initRecipeList();
+    </script>
+
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 receptek • Készítette: Kántor Kamilla</p>
+    <p><a href="#" rel="nofollow">GitHub Pages link helye</a></p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

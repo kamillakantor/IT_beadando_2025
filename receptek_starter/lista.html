@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vezetéknév Keresztnév">
+  <meta name="description" content="Receptek – receptajánló weboldal bevásárlólistával és mini-játékkal.">
+  <title>receptek</title>
+  <link rel="icon" href="favicon2.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Főoldal">
+      <img src="images/logo2.svg" alt="receptek logó">
+      <span class="brand">receptek</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü váltása">☰</button>
+    <nav id="site-nav" class="site-nav" aria-label="Fő navigáció">
+      <a href="index.html">Főoldal</a>
+      <a href="receptek.html">Receptek</a>
+      <a href="lista.html">Bevásárlólista</a>
+      <a href="jatek.html">Játék</a>
+      <a href="kapcsolat.html">Recept beküldése</a>
+    </nav>
+  </header>
+  <main class="container">
+
+    <section class="shopping">
+      <h1>Bevásárlólista</h1>
+
+      <div class="shopping__controls">
+        <label class="sr-only" for="itemText">Új tétel</label>
+        <input id="itemText" type="text" placeholder="Pl. 2 fej vöröshagyma">
+        <button class="btn" id="addBtn">Hozzáadás</button>
+        <button class="btn btn--secondary" id="importBtn">Hozzávalók importálása</button>
+        <button class="btn btn--danger" id="clearDoneBtn">Kész elemek törlése</button>
+        <label class="filter-only">
+          <input type="checkbox" id="hideDone">
+          Csak a nem kész elemek
+        </label>
+      </div>
+
+      <ul id="shoppingList" class="shopping__list" aria-live="polite"></ul>
+    </section>
+
+    <script type="module">
+      import { initShoppingList } from './js/lista.js';
+      initShoppingList();
+    </script>
+
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2025 receptek • Készítette: Kántor Kamilla</p>
+    <p><a href="#" rel="nofollow">GitHub Pages link helye</a></p>
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
